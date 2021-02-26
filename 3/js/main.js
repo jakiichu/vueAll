@@ -1,34 +1,25 @@
-// let hide = new Vue({
-//   el:'#hide',
-//   data: () => {
-//     return{
-//       isElVisible: true
-//     }
-//   },
-//   methods: {
-//     toggleElem:function () {
-//         this.isElVisible = !this.isElVisible
-//     }
-//   }
-// })
-let chooseYouHero = new Vue({
-  el: '#chooseYouHero',
-  data: {
-    selected: 'выберете своего бойца',   
-  }
-})
-
-let chooseYouHero2 = new Vue({
-  el: '#chooseYouHero2',
-  data: {
-    selected: 'выберете своего бойца',
-  }
-})
-
-
 let app = new Vue({
-  el: '#app',
+  el: '.gamePilon',
   data: {
-      visible: true
+      message: ['1',"2",'3','4','5','6','7','8','9'],
+      person1: true
+
+  },
+  methods: {
+
+    addPilon: function(i) {
+      if(this.person1){
+        this.message.splice(i, 1,'x')
+        this.person1 = !this.person1;
+        
+        
+      }
+      else{
+        
+        this.message.splice(i, 1,'o')
+        this.person1 = !this.person1;
+      }
+    }
   }
 });
+

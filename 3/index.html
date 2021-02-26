@@ -9,99 +9,37 @@
     <script defer src="js/main.js"></script>
     <title>Document</title>
     <style>
-        button{
-            display: inline-block;
-        } 
+        .zxc{
+            display: flex;
+            
+        }
+        .zxc > div{
+            width: 30px;
+            height: 30px;
+            border: 1px solid;
+            margin: 10px;
+            padding: 20px;
+        }
+        
+
     </style>
 </head>
-
-    <!-- <div id="hide" >
-        <h1>выберете игроков</h1>
-        <h2>первый игрок</h2>
-        <div id="chooseYouHero" v-if='isElvisible'>
-            <select v-model="selected" multiple>
-                <option>данилка</option>
-                <option>степка</option>
-                <option>никитка</option>
-            </select>
-        <br>
-        <span>{{ selected }}</span>
+    <div class="gamePilon">
+        <div v-for="item in message">{{item}}</div>
+        <div class="zxc">
+            <div class="gamePilon1" v-on:click="addPilon(0)">{{ message[0] }}</div>
+            <div class="gamePilon1" v-on:click="addPilon(1)">{{ message[1] }}</div>
+            <div class="gamePilon1" v-on:click="addPilon(2)">{{ message[2] }}</div>
         </div>
-
-        <h2>второй игрок</h2>
-        <div id="chooseYouHero2" v-if='isElvisible'>
-            <select v-model="selected" multiple>
-                <option>данилка</option>
-                <option>степка</option>
-                <option>никитка</option>
-            </select>
-            <br>
-            <span>{{ selected }}</span>
+        <div class="zxc">
+            <div class="gamePilon1" v-on:click="addPilon(3)">{{ message[3] }}</div>
+            <div class="gamePilon1" v-on:click="addPilon(4)">{{ message[4] }}</div>
+            <div class="gamePilon1" v-on:click="addPilon(5)">{{ message[5] }}</div>
         </div>
-        
-    </div>
-    <button @click="toggleElem">готово</button> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="app">
-        <div v-show="visible">
-            <h1>выберете игроков</h1>
-            <h2>первый игрок</h2>
-            <div id="chooseYouHero">
-                <select v-model="selected" multiple>
-                    <option>данилка</option>
-                    <option>степка</option>
-                    <option>никитка</option>
-                </select>
-            <br>
-            <span>{{ selected }}</span>
-            </div>
-    
-            <h2>второй игрок</h2>
-            <div id="chooseYouHero2">
-                <select v-model="selected" multiple>
-                    <option>данилка</option>
-                    <option>степка</option>
-                    <option>никитка</option>
-                </select>
-                <br>
-                <span>{{ selected }}</span>
-            </div>
-
-
-
+        <div class="zxc">
+            <div class="gamePilon1" v-on:click="addPilon(6)">{{ message[6] }}</div>
+            <div class="gamePilon1" v-on:click="addPilon(7)">{{ message[7] }}</div>
+            <div class="gamePilon1" v-on:click="addPilon(8)">{{ message[8] }}</div>
         </div>
-        <button v-on:click="visible=!visible">готово</button>
     </div>
-    <div id="chooseYouHero2">
-    
-    </div>
-
-
-
-
-
-
-
-
-
-
-    <!-- <div id="gamePilon">
-        
-        <div><button class="str1" v-on:click.once="doThis">0</button><button class="str1" v-on:click.once="doThis">0</button><button class="str1" v-on:click.once="doThis">0</button></div>
-        <div><button class="str2" v-on:click.once="doThis">0</button><button class="str2" v-on:click.once="doThis">0</button><button class="str2" v-on:click.once="doThis">0</button></div>
-        <div><button class="str3" v-on:click.once="doThis">0</button><button class="str3" v-on:click.once="doThis">0</button><button class="str3" v-on:click.once="doThis">0</button></div>
-    </div> -->
-
 </html>
