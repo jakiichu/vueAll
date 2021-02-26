@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="js/vue.js"></script>
+    <script defer src="js/main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="name">
+        <form v-on:submit.prevent="message">
+                <label for="new-name">Ваше имя</label>
+                <input v-model="massage">
+        </form>
+        <p>{{ massage }}</p>
+    </div>
+    <div id="todo-list">
+        
+        <form v-on:submit.prevent="addPoint">
+            <label for="new-todo">корзина</label>
+            <input v-model="newTodoText" >
+            <button>Добавить</button>
+        </form>
+        <ul>
+            <li is="todo-item" v-for="(todo, index) in todos" v-bind:key="todo.id" v-bind:title="todo.title"
+                v-on:remove="todos.splice(index, 1)"></li>
+        </ul>
+    </div>
+</body>
+
+</html>
