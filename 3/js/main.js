@@ -122,19 +122,19 @@ let app2 = new Vue({
                 else{
                   this.asd = Math.floor(Math.random() * (8 - 0 + 1)) + 0;
                 console.log(this.asd + ' - рандомное число');
-                if(this.message[this.asd] != 'x'&& this.message[this.asd] != 'o'){
-                  console.log(this.message[this.asd] + '- чему это раввна')
-                  this.message.splice(this.asd, 1,'o')
-                }
-                else{
-                  this.asd = Math.floor(Math.random() * (8 - 0 + 1)) + 0;
-                  console.log(this.asd + ' - рандомное число');
                   if(this.message[this.asd] != 'x'&& this.message[this.asd] != 'o'){
                     console.log(this.message[this.asd] + '- чему это раввна')
                     this.message.splice(this.asd, 1,'o')
                   }
+                  else{
+                    this.asd = Math.floor(Math.random() * (8 - 0 + 1)) + 0;
+                    console.log(this.asd + ' - рандомное число');
+                      if(this.message[this.asd] != 'x'&& this.message[this.asd] != 'o'){
+                        console.log(this.message[this.asd] + '- чему это раввна')
+                        this.message.splice(this.asd, 1,'o')
+                      }
+                  }
                 }
-              }
               }
             }
           
