@@ -1,45 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script defer src="js/vue.js"></script>
+        <script defer src="js/main.js"></script>
+        <title>Document</title>
+        <style>
+            .zxc{
+                display: flex;
+            }
+            .zxc > div{
+                width: 30px;
+                height: 30px;
+                border: 1px solid;
+                margin: 10px;
+                padding: 20px;
+            }
+            .gamePilon1{
+                text-align: center;
+                vertical-align: center;
+            }
+        </style>
+    </head>
+    <body>
+         <div class="gamePilon">
+            <form action="#">
+                    <p>введите имя первого игрока</p><input type="text" v-model="namePerson1"><br>
+                    <p>введите имя второго игрока</p><input type="text" v-model="namePerson2">
+            </form>
+            <p>выберете за кого будет играть первый игрок</p>
+            <form action="#">
+                <input type="radio" name="asd" id="1"v-on:click="regIdDisableButton" checked>x
+                <input type="radio" name="asd" id="2"v-on:click="regIdDisableButton">o
+                <br>
+                <button v-on:click="start">старт</button>
+            </form>
+            <!-- <div v-for="item in message">{{item}}</div> -->
+            <div class="zxc">
+                <div class="gamePilon1" v-on:click="addPilon(0)">{{ message[0] }}</div>
+                <div class="gamePilon1" v-on:click="addPilon(1)">{{ message[1] }}</div>
+                <div class="gamePilon1" v-on:click="addPilon(2)">{{ message[2] }}</div>
+            </div>
+            <div class="zxc">
+                <div class="gamePilon1" v-on:click="addPilon(3)">{{ message[3] }}</div>
+                <div class="gamePilon1" v-on:click="addPilon(4)">{{ message[4] }}</div>
+                <div class="gamePilon1" v-on:click="addPilon(5)">{{ message[5] }}</div>
+            </div>
+            <div class="zxc">
+                <div class="gamePilon1" v-on:click="addPilon(6)">{{ message[6] }}</div>
+                <div class="gamePilon1" v-on:click="addPilon(7)">{{ message[7] }}</div>
+                <div class="gamePilon1" v-on:click="addPilon(8)">{{ message[8] }}</div>
+            </div>
+            ход игрока: {{ name }}
+            <br>
+            <button v-on:click="messageWinAlert">{{ messageWin }}</button>
+        </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script defer src="js/vue.js"></script>
-    <script defer src="js/main.js"></script>
-    <title>Document</title>
-    <style>
-        .zxc{
-            display: flex;
-            
-        }
-        .zxc > div{
-            width: 30px;
-            height: 30px;
-            border: 1px solid;
-            margin: 10px;
-            padding: 20px;
-        }
-        
 
-    </style>
-</head>
-    <div class="gamePilon">
-        <div v-for="item in message">{{item}}</div>
-        <div class="zxc">
-            <div class="gamePilon1" v-on:click="addPilon(0)">{{ message[0] }}</div>
-            <div class="gamePilon1" v-on:click="addPilon(1)">{{ message[1] }}</div>
-            <div class="gamePilon1" v-on:click="addPilon(2)">{{ message[2] }}</div>
-        </div>
-        <div class="zxc">
-            <div class="gamePilon1" v-on:click="addPilon(3)">{{ message[3] }}</div>
-            <div class="gamePilon1" v-on:click="addPilon(4)">{{ message[4] }}</div>
-            <div class="gamePilon1" v-on:click="addPilon(5)">{{ message[5] }}</div>
-        </div>
-        <div class="zxc">
-            <div class="gamePilon1" v-on:click="addPilon(6)">{{ message[6] }}</div>
-            <div class="gamePilon1" v-on:click="addPilon(7)">{{ message[7] }}</div>
-            <div class="gamePilon1" v-on:click="addPilon(8)">{{ message[8] }}</div>
-        </div>
-    </div>
+        <div class="gameII">
+                <form action="#">
+                        <p>введите имя игрока</p><input type="text" v-model="namePerson1"><br>
+                        
+                </form>
+                <p>выберете за кого будет играть первый игрок</p>
+                
+                <div v-for="item in message">{{item}}</div>
+                <div class="zxc">
+                    <div class="gamePilon1" v-on:click="addPilon(0)">{{ message[0] }}</div>
+                    <div class="gamePilon1" v-on:click="addPilon(1)">{{ message[1] }}</div>
+                    <div class="gamePilon1" v-on:click="addPilon(2)">{{ message[2] }}</div>
+                </div>
+                <div class="zxc">
+                    <div class="gamePilon1" v-on:click="addPilon(3)">{{ message[3] }}</div>
+                    <div class="gamePilon1" v-on:click="addPilon(4)">{{ message[4] }}</div>
+                    <div class="gamePilon1" v-on:click="addPilon(5)">{{ message[5] }}</div>
+                </div>
+                <div class="zxc">
+                    <div class="gamePilon1" v-on:click="addPilon(6)">{{ message[6] }}</div>
+                    <div class="gamePilon1" v-on:click="addPilon(7)">{{ message[7] }}</div>
+                    <div class="gamePilon1" v-on:click="addPilon(8)">{{ message[8] }}</div>
+                </div>
+                
+                <button v-on:click="messageWinAlertII">{{ messageWin }}</button>
+            </div>
+    </body>
 </html>
