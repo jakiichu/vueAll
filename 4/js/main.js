@@ -5,14 +5,14 @@ let app = new Vue({
         position: "absolute",
         width: "90px",
         height: "60px",
-        left:"random()"
+        left:this.left
       },
     rawHtml: '',
-    fish: [],
+    fish: ['',''],
 
 
       game: false,
-      left:'50'
+      left:'50px'
   },
   
   methods: {

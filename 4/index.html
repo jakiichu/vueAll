@@ -18,7 +18,7 @@
     <body>
          <div class="game">
              <button v-on:click="test" ></button>
-            <img :style="styleObject"  v-html="rawHtml" src="fish.png">
+            <img v-for="item in fish" :style="styleObject"  v-html="rawHtml" src="fish.png">
         </div>
     </body>
 </html>
