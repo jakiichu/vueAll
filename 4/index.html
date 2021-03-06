@@ -8,17 +8,17 @@
         <script defer src="js/main.js"></script>
         <title>Document</title>
         <style>
-           .zxc{
-               position:absolute;
-               width: 20px;
-               height: 50px;
-           }
         </style>
     </head>
     <body>
-         <div class="game">
-             <button v-on:click="test" ></button>
+         <!-- <div class="game">
+             <button v-on:click="start" ></button>
             <img v-for="item in fish" :style="styleObject"  v-html="rawHtml" src="fish.png">
-        </div>
+        </div> -->
+
+        <div class="game1">
+            <button v-on:click="createMoreBlockDivFish(6000)" ></button>
+           <img v-for="item in fish" :style="item"  v-html="rawHtml" src="fish.png">
+       </div>
     </body>
 </html>
