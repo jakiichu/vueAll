@@ -11,14 +11,9 @@
         </style>
     </head>
     <body>
-         <!-- <div class="game">
-             <button v-on:click="start" ></button>
-            <img v-for="item in fish" :style="styleObject"  v-html="rawHtml" src="fish.png">
-        </div> -->
-
         <div class="game1">
-            <button v-on:click="createMoreBlockDivFish(6000)" ></button>
-           <img v-for="item in fish" :style="item"  v-html="rawHtml" src="fish.png">
+            <button v-on:click="createMoreBlockDivFish(1)" ></button>
+           <img v-for="item in fish" :style="item.style"  v-html="rawHtml" src="fish.png">
        </div>
     </body>
 </html>
